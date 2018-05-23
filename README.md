@@ -1,21 +1,21 @@
-## This is a base to get quickly started with standalone-endoint-testing!
+# Berechnung der Flaeche eines Dreiecks aus drei Koordinatenpunkten.
 
-**Example how you can use this for your own project *with and empty repository*:**
+**Auschnitt aus den [Test](https://github.com/tobiashochguertel/Flaeche3Punkte/blob/master/src/test/java/org/github/tobiashochguertel/flaeche3punkte/Flaeche3PunktApplicationTests.java):**
 ```
-git clone https://tobias.hochguertel@intranet.valtech.com/bb/scm/vdc/template-standalone-endpoint-testing.git
-git remote delete origin
-git remote add origin <your-repository-url.git>
-git push -u origin --all
+    @Test
+    void demo2() {
+        final FlaechenPunkt before = new FlaechenPunkt(new XWert(10), new YWert(10));
+        final FlaechenPunkt current = new FlaechenPunkt(new XWert(12), new YWert(6));
+        final FlaechenPunkt after = new FlaechenPunkt(new XWert(9), new YWert(8));
+
+        final Flaeche flaeche = FlaechenPunkt.flaeche(before, current, after);
+        final Flaeche expected = new Flaeche(12);
+        Assertions.assertEquals(expected, flaeche);
+    }
 ```
 
-**Exmaple how you can use this within your own project: *exsting repository and content*:** 
-```
-cd project-source
+## Autoren
 
-git clone https://tobias.hochguertel@intranet.valtech.com/bb/scm/vdc/template-standalone-endpoint-testing.git standalone-endpoint-testing
-rm -rf standalone-endpoint-testing/.git
+- Rene Beaupoil
+- Tobias Hochgürtel
 
-git add -A standalone-endpoint-testing
-git commit -m "Adds Template Project: standalone-endpoint-testing"
-git push
-```
