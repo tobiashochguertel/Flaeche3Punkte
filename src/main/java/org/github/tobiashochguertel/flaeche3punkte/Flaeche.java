@@ -12,10 +12,6 @@ public class Flaeche {
         this.flaeche = flaeche.wert;
     }
 
-    public Flaeche minus(Flaeche subtrahend) {
-        return new Flaeche(this.flaeche - subtrahend.flaeche);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

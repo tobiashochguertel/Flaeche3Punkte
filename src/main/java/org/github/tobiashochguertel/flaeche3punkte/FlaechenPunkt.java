@@ -19,12 +19,5 @@ public class FlaechenPunkt {
         return new Flaeche(result.divide(new Wert(2)));
     }
 
-    public Flaeche flaeche(FlaechenPunkt before, FlaechenPunkt after) {
-        if (before == this) {
-            return new Flaeche(0);
-        }
-        return flaeche(before, this);
-    }
-
 
 }
